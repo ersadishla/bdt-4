@@ -1,3 +1,9 @@
+d:
+
+cd TerCapai\SMT5\BDT\EAS
+
+vagrant ssh node
+
 Login into mysql
 
 mysql -h 192.168.17.16 -P 4000 -u root
@@ -19,3 +25,19 @@ ps aux | grep pd
 
 sudo kill -9 <ID Proses>
 sudo kill -9 3903
+
+Sysbench
+
+curl -s https://packagecloud.io/install/repositories/akopytov/sysbench/script.rpm.sh | sudo bash
+
+sudo yum -y install sysbench
+
+git clone https://github.com/pingcap/tidb-bench.git
+
+cd tidb-bench/sysbench
+
+nano config, ganti IP sesuai node1
+
+./run.sh point_select prepare 100
+
+./run.sh point_select run 100

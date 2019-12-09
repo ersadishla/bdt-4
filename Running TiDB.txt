@@ -103,6 +103,8 @@ cd ..
 
 cp /vagrant/config/grafana.ini grafana-6.5.1/conf/
 
+./bin/grafana-server \
+    --config="./conf/grafana.ini" &
 
 
 
