@@ -7,7 +7,16 @@
   - [Langkah-langkah Implementasi](#Langkah-langkah-Implementasi)
   - [File-file yang dibutuhkan](#File-file-yang-dibutuhkan)
 - [Pemanfaatan BDT dalam Aplikasi](#Pemanfaatan-BDT-dalam-Aplikasi)
+  - [Deskripsi Aplikasi](#Deskripsi-Aplikasi)
+  - [Setting Aplikasi](#Setting-Aplikasi)
+  - [Operasi Create](#Operasi-Create)
+  - [Operasi Read](#Operasi-Read)
+  - [Operasi Update](#Operasi-Update)
+  - [Operasi Delete](#Operasi-Delete)
 - [Uji Performa](#Uji-Performa-Aplikasi-dan-Basis-Data)
+  - [JMeter](#Uji-Performa-Aplikasi-dengan-JMeter)
+  - [Sysbench](#Uji-Performa-Basis-Data-dengan-Sysbench.)
+  - [Fail Over](#Uji-coba-Fail-Over)
 - [Monitoring Dashboard](#Monitoring-Dashboard)
 
 
