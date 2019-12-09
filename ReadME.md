@@ -22,7 +22,7 @@
 
 # Implementasi Arsitektur
 ## Desain Arsitektur
-
+![desain](img/desain.jpg)
 ## Detail Arsitektur
   - Node 1
     - IP : 192.168.17.16
