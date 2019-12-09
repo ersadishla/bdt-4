@@ -1,0 +1,21 @@
+Login into mysql
+
+mysql -h 192.168.17.16 -P 4000 -u root
+
+create database trustmedb
+
+DB_CONNECTION=mysql
+DB_HOST=192.168.17.16
+DB_PORT=4000
+DB_DATABASE=trustmedb
+DB_USERNAME=root
+DB_PASSWORD=
+
+Fail over
+
+http://192.168.17.16:2379/pd/api/v1/members
+
+ps aux | grep pd
+
+sudo kill -9 <ID Proses>
+sudo kill -9 3903
