@@ -486,7 +486,7 @@ scrape_configs:
 ./prometheus \
     --config.file="./prometheus.yml" \
     --web.listen-address=":9090" \
-    --web.external-url="http://192.168.16.33:9090/" \
+    --web.external-url="http://192.168.17.16:9090/" \
     --web.enable-admin-api \
     --log.level="info" \
     --storage.tsdb.path="./data.metrics" \
