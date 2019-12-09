@@ -263,6 +263,45 @@ Mengambil kasus menghapus transaksi yang telah selesai
   ![1000](img/jmeter-1000.png)
   Bisa dilihat bahwa average waktu semakin menurun seiring bertambahnya jumlah request
 ## Uji Performa Basis Data dengan Sysbench
+  - Instalasi terlebih dahulu dengan cara
+  ```
+  curl -s https://packagecloud.io/install/repositories/akopytov/sysbench/script.rpm.sh | sudo bash    
+  sudo yum -y install sysbench
+  ```
+  - Clone repositori github tidb-bench
+  ```
+  git clone https://github.com/pingcap/tidb-bench.git
+  ```
+  - Ubah Config tidb-bench
+  ```
+  nano tidb-bench/sysbench/config
+  ```
+  ```
+  time=300
+  db-driver=mysql
+  mysql-host=192.168.17.16
+  mysql-port=4000
+  mysql-user=root
+  mysql-db=sbtest
+  report-interval=10
+  ```
+  Pastikan alamat IP sesuai
+  - Lakukan preparasi, dengan cara
+  ```
+  cd tidb-bench/sysbench
+  ```
+  ```
+  ./run.sh point_select prepare 100
+  ```
+
+  - Lakukan running, dengan cara
+  ```
+  cd tidb-bench/sysbench
+  ```
+  ```
+  ./run.sh point_select run 100
+  ```
+  #### Hasil Ujicoba
   - 3 PD Server
   ```log
   SQL statistics:
